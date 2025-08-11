@@ -1,0 +1,9 @@
+click @ file:///croot/click_1744271578095/work
+joblib @ file:///croot/joblib_1754310200728/work
+mkl-service==2.4.0
+mkl_fft @ file:///io/mkl313/mkl_fft_1730824109137/work
+mkl_random @ file:///io/mkl313/mkl_random_1730823916628/work
+nltk @ file:///croot/nltk_1724427688180/work
+numpy @ file:///croot/numpy_and_numpy_base_1708638617955/work/dist/numpy-1.26.4-cp39-cp39-linux_x86_64.whl#sha256=6094eeedd869502faa0fd0a8c5ad3a70c5779be06ddd1feb7627e5c212fac420
+regex @ file:///croot/regex_1736540786412/work
+tqdm @ file:///croot/tqdm_1738943501192/work
