@@ -184,6 +184,20 @@ def main():
     print(f"Características extraídas del tweet: {caracteristicas}")
     print(f"Palabras del tweet: {palabra_l}")
     
+    # Entrenar el modelo    
+    # Construir la matriz X
+    X = np.zeros((len(train_x), 3))
+    for i in range(len(train_x)):
+        X[i, :], _ = extraer_caracteristicas(train_x[i], frecuencias)
+
+    # Construir el vector Y
+    Y = train_y
+
+    # Entrenar el modelo aplicando gradiente descendente
+    J, theta = gradiente_descendente(X, Y, np.zeros((3, 1)), 1e-9, 1500)
+    print(f"Costo después del entrenamiento: {J:.8f}")
+    print(f"Vector de pesos resultante: {[round(t, 8) for t in np.squeeze(theta)]}")
+    
     # Predecir la polaridad de un tweet de ejemplo
     for tweet in ['I am happy', 'I am bad', 'this movie should have been great.', 'great', 'great great', 'great great great', 'great great great great']:
         print( '%s -> %f' % (tweet, predecir_tweet(tweet, frecuencias, theta)))
