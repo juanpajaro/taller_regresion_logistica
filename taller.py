@@ -84,7 +84,7 @@ def construir_frecuencias(tweets, etiquetas):
 
 def sigmoid(z):
     """Función sigmoide para calcular la probabilidad de pertenencia a la clase positiva."""
-    h = 1 + z
+    h = 1 / (1 + np.exp(-z))
     return h
 
 
