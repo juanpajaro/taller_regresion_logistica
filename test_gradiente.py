@@ -10,7 +10,7 @@ import os
 # Configurar el entorno
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
-from sol import gradiente_descendente, sigmoid
+from taller import gradiente_descendente, sigmoid
 
 def test_gradiente_descendente():
     """Evalúa la función gradiente_descendente y verifica que coincida con los valores esperados"""

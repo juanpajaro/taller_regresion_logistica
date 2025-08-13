@@ -10,7 +10,7 @@ import os
 # Configurar el entorno
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
-from sol import test_logistic_regression, predecir_tweet, construir_frecuencias, gradiente_descendente, extraer_caracteristicas
+from taller import test_logistic_regression, predecir_tweet, construir_frecuencias, gradiente_descendente, extraer_caracteristicas
 
 def test_evaluacion_rl():
     """Evalúa la función test_logistic_regression y verifica que coincida con los valores esperados"""

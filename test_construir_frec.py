@@ -10,7 +10,7 @@ import os
 # Configurar el entorno
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
-from sol import construir_frecuencias
+from taller import construir_frecuencias
 
 def test_construir_frecuencias():
     """Evalúa la función construir_frecuencias y verifica que coincida con los valores esperados"""

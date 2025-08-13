@@ -41,17 +41,24 @@ def limpiar_tweet(tweet):
     Returns:
         list: Lista de palabras limpias del tweet."""
 
-    stemmer = PorterStemmer()
-    stop_words = set(stopwords.words('english'))    
+    ### INICIO DE LA CREACION DE SU CODIGO ###
+
+    stemmer = None
+
+    stop_words = None
+
+    ### USE EXPRESIONES REGULARES ###    
 
     # Eliminar simbolos de monetización
-    #tweet = re.sub(r'\$\w*', '', tweet)
+    tweet = None
     # Eliminar URLs
-    #tweet = re.sub(r'https?://[^\s\n\r]+', '', tweet)
+    tweet = None
     # Eliminar menciones
-    #tweet = re.sub(r'@\w+', '', tweet)
+    tweet = None
     # Eliminar caracteres especiales y números
-    #tweet = re.sub(r'[^a-zA-Z\s]', '', tweet)
+    tweet = None
+
+    ### FIN DE LA CREACION DE SU CODIGO ###
 
     # Tokenizar el tweet
     tokenizer = TweetTokenizer(preserve_case=False, strip_handles=True, reduce_len=True)
@@ -76,32 +83,40 @@ def construir_frecuencias(tweets, etiquetas):
         for palabra in limpiar_tweet(tweet):
             pair = (y, palabra)
             if pair in frecuencias:
-                frecuencias[pair] += 1
+                frecuencias[pair] += None
             else:
-                frecuencias[pair] = 1
+                frecuencias[pair] = None
         
     return frecuencias
 
+#FUNCION INDISPENSABLE EN EL EJERCICIO
 def sigmoid(z):
     """Función sigmoide para calcular la probabilidad de pertenencia a la clase positiva."""
-    h = 1 / (1 + np.exp(-z))
+    ### INICIE LA CREACION DE SU CODIGO ###
+    h = None
+    ### FIN DE LA CREACION DE SU CODIGO ###
     return h
 
 
 def gradiente_descendente(X, y, theta, alpha, num_iter):
     """Función de gradiente descendente para optimizar los parámetros del modelo."""
-    m = X.shape[0]  # Número de ejemplos
+
+    ### INICIO DE LA CREACION DE SU CODIGO ###
+    m = None  # Número de ejemplos
         
     for i in range(0, num_iter):
         # Obtener Z, el producto multiplicativo de X y theta
-        z = np.dot(X, theta)
+        z = None
         # Obtener la sigmoide de Z
-        h = sigmoid(z)
+        h = None
         # calcular la función de costo
-        J = (-1/m) *(np.dot(y.T, np.log(h)) + np.dot((1-y).T, np.log(1 - h)))        
+        J = None        
         # actualizar theta
-        theta = theta - (alpha/ m) * (np.dot(X.T, (h-y)))
+        theta = None
     # Retornar los parámetros optimizados
+
+    ### FIN DE LA CREACION DE SU CODIGO ###
+
     J = float(J)    
     return J, theta
 
@@ -142,7 +157,10 @@ def test_logistic_regression(test_x, test_y, frecuencias, theta):
         else:
             y_hat.append(0)
     y_hat = np.array(y_hat).reshape(-1, 1)
-    accuracy = (y_hat == test_y).mean()
+
+    ### INICIO DE LA CREACION DE SU CODIGO ###
+    accuracy = None
+    ### FIN DE LA CREACION DE SU CODIGO ###
     return accuracy
 
 def main():
