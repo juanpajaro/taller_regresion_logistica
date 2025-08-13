@@ -2,5 +2,7 @@ run_file.py
 p_rl/
 entorno_2/
 __pycache__/
-evalucion.py
 sol.py
+export_env.sh
+evaluacion.py
+import_env.sh
